@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales & Marketing Automation - Aether AI</title>
+    <style>
+        /* --- Global Styles --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --color-bg: #0B0B0B;
+            --color-text: #E0E0E0;
+            --color-text-muted: #9A9A9A;
+            --color-primary: #00A3FF;
+            --color-border: #2A2A2A;
+            --color-card: #121212;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        h1, h2, h3 {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            max-width: 70ch;
+        }
+
+        /* --- Header --- */
+        .header {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--color-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text-muted);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #FFFFFF;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.85;
+        }
+        
+        .btn-secondary {
+            border: 1px solid var(--color-border);
+            color: #FFFFFF;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-card);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Feature Highlight --- */
+        .feature-highlight {
+            padding: 80px 0;
+            background-color: var(--color-card);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .feature-highlight-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        
+        .feature-highlight h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-highlight p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .use-case-box {
+            background-color: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .use-case-box h4 {
+            font-size: 1.1rem;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .use-case-box p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: 0;
+        }
+
+        /* --- Core Capabilities --- */
+        .capabilities {
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .capabilities h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .capabilities .subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            margin-bottom: 64px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            text-align: left;
+        }
+        
+        .capability-card {
+            background-color: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 32px;
+        }
+        
+        .capability-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #FFFFFF;
+        }
+        
+        .capability-card p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin-bottom: 0;
+        }
+
+        /* --- Final CTA --- */
+        .final-cta {
+            background-color: var(--color-card);
+            padding: 100px 0;
+            text-align: center;
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .final-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer p {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+        
+        .footer-links {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+        }
+        
+        .footer-links a {
+            text-decoration: none;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #FFFFFF;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none; /* Hide nav for simplicity */
+            }
+            
+            .feature-highlight-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 11h2v6h-2zM11 7h2v2h-2z"></path></svg>
+                    Aether AI
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#" class="active">Services</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary">Request a Demo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Fuel Your Growth with AI-Powered Sales & Marketing Automation</h1>
+                <p>Engage thousands of leads with personalized, automated journeys. Our AI agents qualify prospects, score leads, and deliver perfectly timed content, helping you boost conversion rates by 60% and supercharge your sales pipeline velocity.</p>
+                <a href="#" class="btn btn-primary">Accelerate Your Revenue</a>
+            </div>
+        </section>
+
+        <section class="feature-highlight">
+            <div class="container">
+                <div class="feature-highlight-content">
+                    <div>
+                        <h2>Intelligent Lead Nurturing & Qualification</h2>
+                        <p>Our AI sales agents analyze prospect behavior, understand intent from email replies, and engage in real-time, multi-channel conversations (email, chat, SMS) to nurture leads from first contact to "sales-ready."</p>
+                    </div>
+                    <div class="use-case-box">
+                        <h4>Use Case</h4>
+                        <p>A B2B SaaS company automated its top-of-funnel nurturing, resulting in a 300% increase in qualified sales meetings and a 45% reduction in the sales cycle length.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="capabilities">
+            <div class="container">
+                <h2>Core AI Capabilities</h2>
+                <p class="subtitle">Our platform is built on a foundation of powerful, adaptable AI technologies designed to solve complex business challenges.</p>
+                
+                <div class="capabilities-grid">
+                    <div class="capability-card">
+                        <h3>Predictive Lead Scoring</h3>
+                        <p>Our machine learning models analyze thousands of data points to predict which leads are most likely to convert. Your sales team can focus 100% of their effort on high-value prospects.</p>
+                    </div>
+                    <div class="capability-card">
+                        <h3>24/7 AI Sales Assistants</h3>
+                        <p>Deploy AI-powered chatbots on your website that qualify visitors, answer product questions with perfect accuracy, and book demos directly onto your sales reps' calendars.</p>
+                    </div>
+                    <div class="capability-card">
+                        <h3>Dynamic Content Personalization</h3>
+                        <p>AI agents dynamically tailor marketing content to each user segment. They identify user interests and automatically deploy the right case study or promotion at the right time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <h2>Ready to Supercharge Your Growth Engine?</h2>
+                <p>Stop letting valuable leads fall through the cracks. Let AI handle the repetitive work of nurturing and scoring, so your team can focus on closing deals.</p>
+                <a href="#" class="btn btn-primary">Request a Live Demo</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2024 Aether AI. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
