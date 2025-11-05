@@ -1,0 +1,196 @@
+/* Basic Resets & Dark Mode */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #000; /* Pure black from screen.png */
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* The container handles left/right centering */
+}
+
+/* Header & Nav */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    /* Uses .container for centering */
+}
+.logo { 
+    font-weight: bold; 
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #f0f0f0;
+}
+.logo-icon {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #007bff, #3c9cff);
+    border-radius: 50%;
+}
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+nav a:hover { color: #fff; }
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.btn-secondary {
+    background: none;
+    border: 1px solid #888;
+    color: #ccc;
+    margin-left: 10px;
+}
+.btn-secondary:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+    /* Uses .container for centering */
+}
+.hero-text { flex-basis: 50%; }
+.hero-text h1 { font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; }
+.hero-text p { font-size: 1.1rem; color: #ccc; max-width: 500px; }
+.hero-image-placeholder {
+    flex-basis: 40%;
+    height: 300px;
+    background-color: #111; /* Darker than body */
+    border: 1px solid #222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #444;
+}
+
+/* Core Capabilities Section */
+.core-capabilities {
+    text-align: center;
+    padding: 60px 0;
+    /* Uses .container for centering */
+}
+.core-capabilities h2 { font-size: 2.2rem; }
+.core-capabilities > p { color: #ccc; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.capabilities-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: space-between;
+    gap: 20px;
+}
+.capability-card {
+    flex-basis: 30%;
+    background-color: #111;
+    border: 1px solid #222;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: left;
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+.capability-card h3 { color: #007bff; }
+
+/* CTA Section */
+.cta {
+    background-color: #111;
+    border: 1px solid #222;
+    text-align: center;
+    padding: 60px 40px;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.cta h2 { font-size: 2rem; }
+.cta p { max-width: 700px; margin-left: auto; margin-right: auto; }
+
+/* Footer */
+footer {
+    border-top: 1px solid #333;
+    padding: 40px 0 20px 0;
+    /* Uses .container for centering */
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Page Header (for sub-pages) */
+.page-header {
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+.page-header h1 {
+    font-size: 3rem;
+}
+.page-header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Content Section (for sub-pages) */
+.content-section {
+    padding: 60px 0;
+}
+.content-section h2 {
+    font-size: 2rem;
+    color: #007bff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.service-card {
+    flex-basis: 31%;
+    background-color: #111;
+    border: 1px solid #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.service-card h3 {
+    margin: 0 0 10px 0;
+    color: #f0f0f0;
+}
+.service-card p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.9rem;
+}
